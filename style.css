@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.22), transparent 30%),
+    linear-gradient(135deg, #eef4ff, #ffffff 45%, #eaf7ff);
+  color: #172033;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 35px 18px;
+}
+
+.hero {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto 24px;
+  padding: 36px 30px;
+  color: white;
+  background: linear-gradient(135deg, #123c8c, #2563eb, #38bdf8);
+  border-radius: 28px;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25);
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 38px;
+}
+
+.hero p {
+  margin: 0 auto;
+  max-width: 650px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 32px;
+  border-radius: 28px;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.section-title {
+  margin-bottom: 18px;
+}
+
+.section-title h2 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  color: #123c8c;
+}
+
+.section-title p {
+  margin: 0;
+  color: #667085;
+}
+
+.course-heading {
+  margin-top: 24px;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: bold;
+  color: #27364f;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d0d7e2;
+  border-radius: 14px;
+  font-size: 15px;
+  background: #fbfdff;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.course-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 155px;
+  padding: 18px;
+  border: 2px solid #dbe7ff;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  border-color: #7aa7ff;
+  box-shadow: 0 14px 24px rgba(37, 99, 235, 0.12);
+}
+
+.course-card input {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  accent-color: #2563eb;
+}
+
+.course-card:has(input:checked) {
+  border-color: #2563eb;
+  background: linear-gradient(180deg, #eef5ff, #ffffff);
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.18);
+}
+
+.course-code {
+  width: fit-content;
+  padding: 6px 10px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: #e8f1ff;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.course-card strong {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #10233f;
+}
+
+.course-card small {
+  color: #667085;
+  line-height: 1.45;
+}
+
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.radio-group label,
+.agreement {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-group input,
+.agreement input {
+  width: auto;
+}
+
+.bottom-space {
+  margin-bottom: 18px;
+}
+
+.agreement {
+  padding: 14px;
+  border-radius: 14px;
+  background: #f4f8ff;
+  border: 1px solid #dbe7ff;
+}
+
+button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 15px;
+  border: none;
+  background: linear-gradient(135deg, #123c8c, #2563eb);
+  color: white;
+  font-size: 17px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.25);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0f3275, #1d4ed8);
+}
+
+.message {
+  margin: 20px 0 0;
+  text-align: center;
+  font-weight: bold;
+  color: #1d4ed8;
+}
+
+@media (max-width: 800px) {
+  .two-columns,
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .form-card,
+  .hero {
+    padding: 24px;
+    border-radius: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .radio-group {
+    grid-template-columns: 1fr;
+  }
+}

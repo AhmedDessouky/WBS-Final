@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Course Registration</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <span class="badge">Online Registration Portal</span>
+      <h1>Student Course Registration</h1>
+      <p>Choose your courses, preferred section, and submit your registration request in one simple form.</p>
+    </section>
+
+    <section class="form-card">
+      <form id="registrationForm">
+        <div class="section-title">
+          <h2>Student Information</h2>
+          <p>Please enter your academic details correctly.</p>
+        </div>
+
+        <div class="grid two-columns">
+          <div class="field">
+            <label for="full_name">Full Name</label>
+            <input type="text" id="full_name" name="full_name" placeholder="Enter your full name" required />
+          </div>
+
+          <div class="field">
+            <label for="student_id">Student ID</label>
+            <input type="text" id="student_id" name="student_id" placeholder="Enter your student ID" required />
+          </div>
+        </div>
+
+        <div class="grid two-columns">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+
+          <div class="field">
+            <label for="major">Major</label>
+            <select id="major" name="major" required>
+              <option value="">Select your major</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Business">Business</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Communication">Communication</option>
+              <option value="Architecture">Architecture</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="section-title course-heading">
+          <h2>Select Courses</h2>
+          <p>You can select more than one course in the same submission.</p>
+        </div>
+
+        <div class="course-grid">
+          <label class="course-card">
+            <input type="checkbox" name="courses" value="Web Development" />
+            <span class="course-code">CSCE 210</span>
+            <strong>Web Development</strong>
+            <small>Frontend, forms, styling, and deployment</small>
+          </label>
+
+          <label class="course-card">
+            <input type="checkbox" name="courses" value="Database Systems" />
+            <span class="course-code">CSCE 330</span>
+            <strong>Database Systems</strong>
+            <small>SQL, tables, records, and queries</small>
+          </label>
+
+          <label class="course-card">
+            <input type="checkbox" name="courses" value="Software Engineering" />
+            <span class="course-code">CSCE 360</span>
+            <strong>Software Engineering</strong>
+            <small>Project planning, testing, and teamwork</small>
+          </label>
+
+          <label class="course-card">
+            <input type="checkbox" name="courses" value="Artificial Intelligence" />
+            <span class="course-code">CSCE 460</span>
+            <strong>Artificial Intelligence</strong>
+            <small>Models, logic, prediction, and automation</small>
+          </label>
+
+          <label class="course-card">
+            <input type="checkbox" name="courses" value="Cybersecurity" />
+            <span class="course-code">CSCE 430</span>
+            <strong>Cybersecurity</strong>
+            <small>Security, access control, and protection</small>
+          </label>
+
+          <label class="course-card">
+            <input type="checkbox" name="courses" value="Mobile App Development" />
+            <span class="course-code">CSCE 410</span>
+            <strong>Mobile App Development</strong>
+            <small>Apps, screens, navigation, and UI design</small>
+          </label>
+        </div>
+
+        <div class="grid two-columns bottom-space">
+          <div class="field">
+            <label for="section">Preferred Section</label>
+            <select id="section" name="section" required>
+              <option value="">Select section</option>
+              <option value="Section 1">Section 1</option>
+              <option value="Section 2">Section 2</option>
+              <option value="Section 3">Section 3</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Year Level</label>
+            <div class="radio-group">
+              <label><input type="radio" name="year_level" value="Freshman" required /> Freshman</label>
+              <label><input type="radio" name="year_level" value="Sophomore" /> Sophomore</label>
+              <label><input type="radio" name="year_level" value="Junior" /> Junior</label>
+              <label><input type="radio" name="year_level" value="Senior" /> Senior</label>
+            </div>
+          </div>
+        </div>
+
+        <label class="agreement">
+          <input type="checkbox" id="agreement" name="agreement" required />
+          I confirm that the information provided is correct.
+        </label>
+
+        <button type="submit">Submit Registration</button>
+      </form>
+
+      <p id="message" class="message"></p>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
